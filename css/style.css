@@ -1,0 +1,39 @@
+input {
+	display: block;
+	margin:2px;
+	padding: 5px;
+	/* background-color: #ccc; */
+	text-align: right
+}
+
+.rifornimento{
+	background-color: blue;
+	color: white;
+	margin: 3px;
+	padding: 10px;
+	text-align: center;
+}
+
+.corretto {
+	background-color:rgba(0,255,0,0.3); 
+	color: rgba(0,255,0,1); 
+}
+
+.errato{
+	background-color:rgba(255,0,0,0.3);
+	color: rgba(255,0,0,1);
+}
+
+:required {
+	/* background-color: blue; */
+	border: solid 2px;
+	border-bottom-color: rgba(255,0,0,0.3);
+}
+
+#comandi {
+	margin-top: 20px;
+}
+
+.key {
+	color: red;
+}

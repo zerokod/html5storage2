@@ -1,0 +1,47 @@
+<!doctype HTML>
+<html>
+	<head>
+		<title>Inizio form validation</title>
+		<link rel='stylesheet' href='css/style.css' />
+		<script src="./js/storage_v2.js"></script>
+	</head>
+	<body>
+		<h1>Primo esempio di validazione</h1>
+		<form id='formVeicolo'>
+			<h2>Immetti rifornimento</h2>
+			<input id='ipPagato' placeholder="0,00 totale acquistato" min='0'>
+			<input id='ipPrezzoLitro'  placeholder="0,000 &euro;/l" min='0'>
+			<input id='ipLitri' placeholder=" 0,00 numero l" min='0'>
+			
+			<div id='comandi' >
+				<input type="button" value='salva in sessione' 
+						onclick="onClickButtonSaveToSession();" />
+				<input type="button" value='salva in modo persistente'
+						onclick="onClickButtonSaveToLocal();" />
+				<br />
+				<input type="button" value='aggiungi'  onclick="onClickAdd();"/>
+				<br>
+				<input type="button" value='ricarica da sessione' onclick="loadFromSession()" />
+				<input type="button" value='ricarica da locale' onclick="loadFromLocal()" />
+				<br />
+				<input type="reset" value='pulisci' />
+				<input type="button" value='cancella Storages' onclick="clearAllStorages(); init();"/>
+			</div>
+			<div id='rifornimentiStatus'>
+				<h4>Rifornimenti:</h4>
+				<div id='rifornimentiStatusContent'>
+				</div>
+			</div>
+			<div id='sessionStorageStatus'>
+				<h4>Session Storage</h4>
+				<div id='sessionStorageStatusContent'>
+				</div>
+			</div>
+			<div id='localStorageStatus'>
+				<h4>Local Storage</h4>
+				<div id='localStorageStatusContent'>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>
